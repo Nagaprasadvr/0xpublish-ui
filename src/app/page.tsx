@@ -1,6 +1,7 @@
+import Home from "@/components/Home/Home";
 import { Box, Button, Typography } from "@mui/material";
 
-export default function Home() {
+export default function Index() {
   return (
     <Box
       className="center"
@@ -8,7 +9,8 @@ export default function Home() {
         flexDirection: "column",
       }}
     >
-      <Button>Øxpublish LFG</Button>
+      {/* <Button>Øxpublish LFG</Button> */}
+      <Home />
     </Box>
   );
 }
