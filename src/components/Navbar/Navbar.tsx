@@ -10,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Logo } from "../Logo/Logo";
 import { Wallet } from "./Wallet";
+import { MobileNav } from "./MobileNav";
 
 export const NavLinks = [
   { name: "Home", link: "/", color: "cyan" },
@@ -61,40 +62,6 @@ export const Navbar = () => {
             cursor: "pointer",
           }}
         >
-          {/* <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
-            <Typography fontSize={"25px"} color={"lavender"}>
-              0
-            </Typography>
-            <Typography fontSize={"25px"} color={"skyblue"}>
-              x
-            </Typography>
-            <Typography fontSize={"25px"} color={"coral"}>
-              P
-            </Typography>
-            <Typography fontSize={"25px"} color={"cyan"}>
-              u
-            </Typography>
-            <Typography fontSize={"25px"} color={"lightblue"}>
-              b
-            </Typography>
-            <Typography fontSize={"25px"} color={"darkTurquoise"}>
-              l
-            </Typography>
-            <Typography fontSize={"25px"} color={"lightpink"}>
-              i
-            </Typography>
-            <Typography fontSize={"25px"} color={"lightskyblue"}>
-              s
-            </Typography>
-            <Typography fontSize={"25px"} color={"lavender"}>
-              h
-            </Typography>
-          </Box> */}
           <Logo size={30} />
         </Box>
 
@@ -139,21 +106,22 @@ export const Navbar = () => {
             ml: "20px",
           }}
         >
-          <Wallet />
+          <Wallet setOpen={null} />
         </Box>
       )}
-      {/* {mobileScreen && (
+      {mobileScreen && (
         <Box
           sx={{
             display: mobileScreen ? "flex" : "none",
             gap: "10px",
             justifyContent: "center",
             alignItems: "center",
+            padding: "10px",
           }}
         >
           <MobileNav />
-        </Box> */}
-      {/* )} */}
+        </Box>
+      )}
     </nav>
   );
 };

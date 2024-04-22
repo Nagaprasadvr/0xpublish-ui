@@ -14,9 +14,19 @@ import toast from "react-hot-toast";
 import Image from "next/image";
 import { minimizePubkey } from "@/utils/helpers";
 
-export const Wallet = () => {
+export const Wallet = ({
+  setOpen,
+}: {
+  setOpen: React.Dispatch<React.SetStateAction<boolean>> | null;
+}) => {
   const { setVisible } = useWalletModal();
   const handleConnect = () => {
+    console.log("handleConnect");
+    console.log("setOpen", setOpen);
+    if (setOpen) {
+      console.log("setOpen");
+      setOpen(false);
+    }
     setVisible(true);
   };
 

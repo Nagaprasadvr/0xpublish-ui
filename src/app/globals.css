@@ -13,8 +13,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 25%;
-  height: 100%;
-  margin: 10px;
   overflow: hidden;
   letter-spacing: 1.5px;
 }
