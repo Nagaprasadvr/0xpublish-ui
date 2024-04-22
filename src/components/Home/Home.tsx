@@ -1,20 +1,56 @@
+"use client";
 import React from "react";
-import { Typography, List, ListItem, ListItemText, Box } from "@mui/material";
+import {
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+  Box,
+  useTheme,
+  useMediaQuery,
+  SxProps,
+} from "@mui/material";
+const mobileStyles: SxProps = {
+  display: "flex",
+  flexDirection: "column",
+  overflow: "auto",
+  gap: "10px",
+  height: "500px",
+  alignItems: "flex-start",
+  marginTop: "100px",
+  textWrap: "wrap",
+  width: "100%",
+};
 
 const Home = () => {
+  const { breakpoints } = useTheme();
+  const mobileScreen = useMediaQuery(breakpoints.down("sm"));
+
   return (
     <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        height: "600px",
-        overflow: "auto",
-        gap: "10px",
-        alignItems: "center",
-        marginTop: "100px",
-      }}
+      sx={
+        mobileScreen
+          ? {
+              ...mobileStyles,
+              marginLeft: "10px",
+            }
+          : {
+              display: "flex",
+              flexDirection: "column",
+              height: "600px",
+              overflow: "auto",
+              gap: "10px",
+              alignItems: "center",
+              marginTop: "100px",
+              width: "100%",
+            }
+      }
     >
-      <Typography variant="h2" gutterBottom color={"primary"}>
+      <Typography
+        variant={mobileScreen ? "h4" : "h2"}
+        gutterBottom
+        color={"primary"}
+      >
         Welcome to Øxpublish
       </Typography>
       <Typography variant="body1" gutterBottom>
@@ -22,7 +58,7 @@ const Home = () => {
       </Typography>
 
       <Box>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant={mobileScreen ? "h5" : "h4"} gutterBottom>
           Why Choose Øxpublish?
         </Typography>
         <List>
@@ -62,10 +98,11 @@ const Home = () => {
       <Typography
         variant="body1"
         gutterBottom
-        sx={{
-          marginLeft: "100px",
-          marginRight: "100px",
-        }}
+        sx={
+          mobileScreen
+            ? { width: "100%" }
+            : { width: "50%", textAlign: "center" }
+        }
       >
         Join us in revolutionizing research publishing. Explore cutting-edge
         research, share your insights, and be part of a decentralized future
