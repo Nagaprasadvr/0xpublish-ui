@@ -1,16 +1,11 @@
 "use client";
-import {
-  Box,
-  Button,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, CircularProgress, useMediaQuery, useTheme } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import { Logo } from "../Logo/Logo";
 import { Wallet } from "./Wallet";
 import { MobileNav } from "./MobileNav";
+import React, { useEffect } from "react";
 
 export const NavLinks = [
   { name: "Home", link: "/", color: "cyan" },
@@ -23,6 +18,15 @@ export const NavLinks = [
 export const Navbar = () => {
   const { breakpoints } = useTheme();
   const mobileScreen = useMediaQuery(breakpoints.down("md"));
+
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  });
+
   return (
     <nav
       style={{
@@ -98,18 +102,21 @@ export const Navbar = () => {
         </Box> */}
       </Box>
 
-      {!mobileScreen && (
+      {isLoading ? (
         <Box
-          display={mobileScreen ? "none" : "flex"}
           sx={{
-            mr: "20px",
-            ml: "20px",
+            p: "10px",
           }}
         >
-          <Wallet setOpen={null} />
+          <CircularProgress
+            size={30}
+            thickness={6}
+            sx={{
+              color: "primary",
+            }}
+          />
         </Box>
-      )}
-      {mobileScreen && (
+      ) : mobileScreen ? (
         <Box
           sx={{
             display: mobileScreen ? "flex" : "none",
@@ -120,6 +127,16 @@ export const Navbar = () => {
           }}
         >
           <MobileNav />
+        </Box>
+      ) : (
+        <Box
+          display={mobileScreen ? "none" : "flex"}
+          sx={{
+            mr: "20px",
+            ml: "20px",
+          }}
+        >
+          <Wallet setOpen={null} />
         </Box>
       )}
     </nav>
