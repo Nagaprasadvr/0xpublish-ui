@@ -7,11 +7,13 @@ export const ToastProviderUI = () => {
       position="bottom-left"
       toastOptions={{
         style: {
-          color: "black",
-          backgroundColor: "white",
+          color: "#87cefa",
+          backgroundColor: "black",
+          border: "2px solid #87cefa",
           width: "fit-content",
           fontFamily: '"BedSteadRegular", sans-serif',
           fontWeight: "600",
+          fontSize: "15px",
           zIndex: 999999,
         },
       }}

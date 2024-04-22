@@ -21,8 +21,6 @@ export const Wallet = ({
 }) => {
   const { setVisible } = useWalletModal();
   const handleConnect = () => {
-    console.log("handleConnect");
-    console.log("setOpen", setOpen);
     if (setOpen) {
       console.log("setOpen");
       setOpen(false);
@@ -35,10 +33,17 @@ export const Wallet = ({
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
   const { connected, publicKey, disconnect, wallet } = useWallet();
+
+  useEffect(() => {
+    if (connected) {
+      toast.success("Connected to wallet !");
+    }
+  }, [connected]);
 
   const handleDisconnect = () => {
     disconnect().then(() => {
