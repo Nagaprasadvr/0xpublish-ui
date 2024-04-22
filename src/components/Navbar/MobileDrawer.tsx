@@ -53,7 +53,7 @@ export const MobDrawer = () => {
           borderBottom: `1px solid ${CHARCOAL}`,
         }}
       >
-        <Button onClick={handleClose}>
+        <Button onClick={handleClose} size="small">
           <CloseIcon />
         </Button>
       </Box>
@@ -109,7 +109,7 @@ export const MobDrawer = () => {
         overflow: "hidden",
       }}
     >
-      <Button onClick={toggleDrawer(true)}>
+      <Button onClick={toggleDrawer(true)} size="small">
         <MenuIcon />
       </Button>
       <Drawer open={open} onClose={toggleDrawer(false)} anchor="right">
