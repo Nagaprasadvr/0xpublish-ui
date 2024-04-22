@@ -15,9 +15,9 @@ const mobileStyles: SxProps = {
   flexDirection: "column",
   overflow: "auto",
   gap: "10px",
-  height: "500px",
+  height: "60vh",
   alignItems: "flex-start",
-  marginTop: "100px",
+  marginTop: "50px",
   textWrap: "wrap",
   width: "100%",
 };
@@ -37,11 +37,11 @@ const Home = () => {
           : {
               display: "flex",
               flexDirection: "column",
-              height: "600px",
+              height: "70vh",
               overflow: "auto",
               gap: "10px",
               alignItems: "center",
-              marginTop: "100px",
+              marginTop: "50px",
               width: "100%",
             }
       }
