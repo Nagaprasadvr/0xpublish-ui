@@ -14,13 +14,11 @@ import {
 const mobileStyles: SxProps = {
   display: "flex",
   flexDirection: "column",
-  overflow: "auto",
   gap: "10px",
-  height: "60vh",
   alignItems: "flex-start",
   marginTop: "50px",
   textWrap: "wrap",
-  width: "100%",
+  width: "95%",
 };
 
 const Home = () => {
@@ -32,10 +30,12 @@ const Home = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: "10px",
+        gap: "40px",
         width: "100%",
         alignItems: "center",
-        justifyContent: "center",
+        height: "70vh",
+        overflow: "auto",
+        overflowX: "hidden",
       }}
     >
       <Box
@@ -43,13 +43,11 @@ const Home = () => {
           mobileScreen
             ? {
                 ...mobileStyles,
-                marginLeft: "10px",
+                marginLeft: "20px",
               }
             : {
                 display: "flex",
                 flexDirection: "column",
-                height: "70vh",
-                overflow: "auto",
                 gap: "10px",
                 alignItems: "center",
                 marginTop: "50px",
@@ -120,7 +118,22 @@ const Home = () => {
           with Øxpublish on Solana and Arweave.
         </Typography>
       </Box>
-      <Button>Start Publishing</Button>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: mobileScreen ? "column" : "row",
+          gap: "40px",
+        }}
+      >
+        <Button>Start Publishing</Button>
+        <Button
+          sx={{
+            width: "100%",
+          }}
+        >
+          Start Reading
+        </Button>
+      </Box>
     </Box>
   );
 };

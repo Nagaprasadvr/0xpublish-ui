@@ -57,7 +57,7 @@ export const MobDrawer = () => {
           <CloseIcon />
         </Button>
       </Box>
-      {/* {NavLinks.map((nav) => (
+      {NavLinks.map((nav) => (
         <Box
           key={nav.name}
           sx={{
@@ -89,7 +89,7 @@ export const MobDrawer = () => {
             {nav.name}
           </Button>
         </Box>
-      ))} */}
+      ))}
       <Box
         sx={{
           display: "flex",
@@ -109,8 +109,17 @@ export const MobDrawer = () => {
         overflow: "hidden",
       }}
     >
-      <Button onClick={toggleDrawer(true)} size="small">
-        <MenuIcon />
+      <Button
+        onClick={toggleDrawer(true)}
+        size="small"
+        sx={{
+          backgroundColor: "transparent",
+          ":hover": {
+            backgroundColor: "transparent",
+          },
+        }}
+      >
+        <MenuIcon color="primary" />
       </Button>
       <Drawer open={open} onClose={toggleDrawer(false)} anchor="right">
         {DrawerList}

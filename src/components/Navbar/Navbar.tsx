@@ -1,5 +1,11 @@
 "use client";
-import { Box, CircularProgress, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  CircularProgress,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import { Logo } from "../Logo/Logo";
@@ -8,11 +14,8 @@ import { MobileNav } from "./MobileNav";
 import React, { useEffect } from "react";
 
 export const NavLinks = [
-  { name: "Home", link: "/", color: "cyan" },
-  { name: "PayChad", link: "/Pay", color: "lightblue" },
-  { name: "PayrollHistory", link: "/PayrollHistory", color: "coral" },
-  { name: "Chads", link: "/Chads", color: "lightgreen" },
-  { name: "AddChads", link: "/AddChads", color: "aquamarine" },
+  { name: "Publish", link: "/Publish", color: "cyan" },
+  { name: "Read", link: "/Read", color: "lightblue" },
 ];
 
 export const Navbar = () => {
@@ -69,7 +72,7 @@ export const Navbar = () => {
           <Logo size={30} />
         </Box>
 
-        {/* <Box
+        <Box
           sx={{
             display: mobileScreen ? "none" : "flex",
             gap: "10px",
@@ -99,7 +102,7 @@ export const Navbar = () => {
               </Button>
             </Link>
           ))}
-        </Box> */}
+        </Box>
       </Box>
 
       {isLoading ? (
