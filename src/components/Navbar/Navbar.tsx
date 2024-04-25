@@ -14,6 +14,7 @@ import { MobileNav } from "./MobileNav";
 import React, { useEffect } from "react";
 
 export const NavLinks = [
+  { name: "Home", link: "/", color: "lightgreen" },
   { name: "Publish", link: "/Publish", color: "cyan" },
   { name: "Read", link: "/Read", color: "lightblue" },
 ];

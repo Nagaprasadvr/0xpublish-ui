@@ -1,4 +1,4 @@
-import Home from "@/components/Home/Home";
+import { HomePage } from "@/components/Home/HomePage";
 import { Box, Button, Typography } from "@mui/material";
 
 export default function Index() {
@@ -9,8 +9,7 @@ export default function Index() {
         flexDirection: "column",
       }}
     >
-      {/* <Button>Øxpublish LFG</Button> */}
-      <Home />
+      <HomePage />
     </Box>
   );
 }

@@ -21,7 +21,7 @@ const mobileStyles: SxProps = {
   width: "95%",
 };
 
-const Home = () => {
+export const HomePage = () => {
   const { breakpoints } = useTheme();
   const mobileScreen = useMediaQuery(breakpoints.down("sm"));
 
@@ -137,5 +137,3 @@ const Home = () => {
     </Box>
   );
 };
-
-export default Home;

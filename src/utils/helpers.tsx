@@ -1,4 +1,4 @@
-import { Box, Skeleton } from "@mui/material";
+import { Box, Skeleton, Typography } from "@mui/material";
 import {
   GridRenderCellParams,
   GridTreeNodeWithRender,
@@ -113,4 +113,29 @@ export const getExpiry = () => {
   date.setSeconds(0);
 
   return date;
+};
+
+export const KeyValueTypography = ({
+  keyName,
+  value,
+}: {
+  keyName: string;
+  value: string;
+}) => {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        gap: "12px",
+        justifyContent: "flex-start",
+        textWrap: "wrap",
+      }}
+    >
+      <Typography color="secondary" fontSize={"20px"} fontWeight={"600"}>
+        {keyName}:
+      </Typography>
+      <Typography fontSize={"20px"}>{value}</Typography>
+    </Box>
+  );
 };
