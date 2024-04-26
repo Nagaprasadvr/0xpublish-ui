@@ -130,13 +130,23 @@ export const KeyValueTypography = ({
         flexDirection: mobScreen ? "column" : "row",
         gap: "12px",
         justifyContent: "flex-start",
-        textWrap: "wrap",
+        textWrap: "nowrap",
+        width: "100%",
       }}
     >
       <Typography color="secondary" fontSize={"20px"} fontWeight={"600"}>
-        {keyName} {mobScreen ? "" : ":"}
+        {keyName}
+        {mobScreen ? "" : ":"}
       </Typography>
-      <Typography fontSize={"20px"}>{value}</Typography>
+      <Box
+        sx={{
+          display: "flex",
+          width: "100%",
+          overflowX: "auto",
+        }}
+      >
+        <Typography fontSize={"20px"}>{value}</Typography>
+      </Box>
     </Box>
   );
 };

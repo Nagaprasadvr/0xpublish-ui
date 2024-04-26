@@ -30,10 +30,11 @@ export const ResearchPaperRecordComponent = ({
         backgroundColor: "transparent",
         boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
         border: "2px solid #87cefa",
-        overflow: "auto",
+        overflowY: "auto",
+        overflowX: "hidden",
         "@media (max-width: 1500px)": {
           width: "80vw",
-          height: "40vh",
+          height: "38vh",
         },
         "@media (max-width: 800px)": {
           width: "80vw",
