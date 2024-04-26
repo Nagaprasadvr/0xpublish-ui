@@ -134,7 +134,7 @@ export const KeyValueTypography = ({
       }}
     >
       <Typography color="secondary" fontSize={"20px"} fontWeight={"600"}>
-        {keyName}
+        {keyName} {mobScreen ? "" : ":"}
       </Typography>
       <Typography fontSize={"20px"}>{value}</Typography>
     </Box>
