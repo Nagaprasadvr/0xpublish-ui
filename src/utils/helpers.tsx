@@ -1,4 +1,4 @@
-import { Box, Skeleton, Typography } from "@mui/material";
+import { Box, Skeleton, Typography, useMediaQuery } from "@mui/material";
 import {
   GridRenderCellParams,
   GridTreeNodeWithRender,
@@ -122,18 +122,19 @@ export const KeyValueTypography = ({
   keyName: string;
   value: string;
 }) => {
+  const mobScreen = useMediaQuery("(max-width: 800px)");
   return (
     <Box
       sx={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: mobScreen ? "column" : "row",
         gap: "12px",
         justifyContent: "flex-start",
         textWrap: "wrap",
       }}
     >
       <Typography color="secondary" fontSize={"20px"} fontWeight={"600"}>
-        {keyName}:
+        {keyName}
       </Typography>
       <Typography fontSize={"20px"}>{value}</Typography>
     </Box>

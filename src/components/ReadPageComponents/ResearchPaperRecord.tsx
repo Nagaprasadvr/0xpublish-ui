@@ -5,7 +5,6 @@ import { Box, useMediaQuery } from "@mui/material";
 export const ResearchPaperRecordComponent = ({
   ...props
 }: ResearchPaperRecord) => {
-  const mediumScreen = useMediaQuery("(max-width: 1500px)");
   const {
     name,
     paperId,
@@ -25,12 +24,21 @@ export const ResearchPaperRecordComponent = ({
         gap: "10px",
         alignItems: "flex-start",
         justifyContent: "flex-start",
-        height: mediumScreen ? "fit-content" : "40vh",
-        width: mediumScreen ? "100%" : "40vw",
+        height: "40vh",
+        width: "40vw",
         borderRadius: "10px",
         backgroundColor: "transparent",
         boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
         border: "2px solid #87cefa",
+        overflow: "auto",
+        "@media (max-width: 1500px)": {
+          width: "80vw",
+          height: "40vh",
+        },
+        "@media (max-width: 800px)": {
+          width: "80vw",
+          height: "80vh",
+        },
       }}
     >
       <KeyValueTypography keyName={"Name"} value={name}></KeyValueTypography>
