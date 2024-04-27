@@ -19,7 +19,9 @@ const Read = () => {
       const fieldsToSearch = Object.values(record).map((field) =>
         field.toString().toLowerCase()
       );
-      return fieldsToSearch.some((field) => field.includes(searchString));
+      return fieldsToSearch.some((field) =>
+        field.includes(searchString.toLowerCase())
+      );
     });
   };
   const [searchString, setSearchString] = useState<string>("");
