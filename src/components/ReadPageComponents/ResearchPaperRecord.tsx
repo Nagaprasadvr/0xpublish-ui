@@ -1,6 +1,7 @@
 import { KeyValueTypography } from "@/utils/helpers";
 import { ResearchPaperRecord } from "@/utils/types";
 import { Box, useMediaQuery } from "@mui/material";
+import Image from "next/image";
 
 export const ResearchPaperRecordComponent = ({
   ...props
@@ -47,7 +48,22 @@ export const ResearchPaperRecordComponent = ({
         keyName={"Paper ID"}
         value={paperId}
       ></KeyValueTypography>
-
+      <Box
+        sx={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "center",
+          mt: "20px",
+          mb: "20px",
+        }}
+      >
+        <Image
+          src="/svg/incognito.svg"
+          height={200}
+          width={200}
+          alt={"image"}
+        ></Image>
+      </Box>
       <KeyValueTypography
         keyName={"Domain"}
         value={domain}
@@ -68,7 +84,6 @@ export const ResearchPaperRecordComponent = ({
         keyName={"Access Fee"}
         value={accessFee.toLocaleString()}
       ></KeyValueTypography>
-      <KeyValueTypography keyName={"Image"} value={image}></KeyValueTypography>
     </Box>
   );
 };
