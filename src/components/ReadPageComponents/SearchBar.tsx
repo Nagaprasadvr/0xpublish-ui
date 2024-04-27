@@ -23,8 +23,8 @@ export const SearchBar = ({
         gap: "20px",
         borderRadius: "10px",
         width: "fit-content",
-        p: "6px",
-        border: `2px solid ${palette.secondary.main}`,
+        p: "4px",
+        border: `2px solid ${palette.primary.main}`,
         alignItems: "center",
       }}
     >
@@ -35,6 +35,7 @@ export const SearchBar = ({
         onChange={handleSearch}
         disableUnderline
         placeholder="Search"
+        size="small"
       />
     </Box>
   );

@@ -4,24 +4,29 @@ import { dummyData } from "@/components/ReadPageComponents/dummyData";
 import { ResearchPaperRecordComponent } from "@/components/ReadPageComponents/ResearchPaperRecord";
 import { SearchBar } from "@/components/ReadPageComponents/SearchBar";
 import { ResearchPaperRecord } from "@/utils/types";
-import { Search } from "@mui/icons-material";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
 
 const Read = () => {
   const [data, setData] = useState<ResearchPaperRecord[]>([]);
-  const mediumScreen = useMediaQuery("(max-width: 1500px)");
   const mobScreen = useMediaQuery("(max-width: 800px)");
   useEffect(() => {
     setData(dummyData);
   }, []);
+
+  const searchFn = (searchString: string, data: ResearchPaperRecord[]) => {
+    return data.filter((record) => {
+      const fieldsToSearch = Object.values(record).map((field) =>
+        field.toString().toLowerCase()
+      );
+      return fieldsToSearch.some((field) => field.includes(searchString));
+    });
+  };
   const [searchString, setSearchString] = useState<string>("");
   const memoizedData = useMemo(() => {
     if (data?.length === 0) return [];
     if (searchString !== "") {
-      return data.filter((record) =>
-        record.name.toLowerCase().includes(searchString.toLowerCase())
-      );
+      return searchFn(searchString, data);
     }
     return data;
   }, [data, searchString]);
@@ -41,6 +46,7 @@ const Read = () => {
           justifyContent: mobScreen ? "center" : "space-around",
           alignItems: "center",
           gap: "10px",
+          p: "10px",
         }}
       >
         <Typography

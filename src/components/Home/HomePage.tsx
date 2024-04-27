@@ -11,6 +11,8 @@ import {
   SxProps,
   Button,
 } from "@mui/material";
+
+import { useRouter } from "next/navigation";
 const mobileStyles: SxProps = {
   display: "flex",
   flexDirection: "column",
@@ -25,6 +27,13 @@ export const HomePage = () => {
   const { breakpoints } = useTheme();
   const mobileScreen = useMediaQuery(breakpoints.down("sm"));
 
+  const router = useRouter();
+  const handleOnClickPublish = () => {
+    router.push("/Publish");
+  };
+  const handleOnClickRead = () => {
+    router.push("/Read");
+  };
   return (
     <Box
       sx={{
@@ -125,11 +134,12 @@ export const HomePage = () => {
           gap: "40px",
         }}
       >
-        <Button>Start Publishing</Button>
+        <Button onClick={handleOnClickPublish}>Start Publishing</Button>
         <Button
           sx={{
             width: "100%",
           }}
+          onClick={handleOnClickRead}
         >
           Start Reading
         </Button>
