@@ -31,8 +31,6 @@ export const ResearchPaperRecordComponent = ({
         backgroundColor: "transparent",
         boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
         border: "2px solid #87cefa",
-        overflowY: "auto",
-        overflowX: "hidden",
         "@media (max-width: 1500px)": {
           width: "40vw",
           height: "60vh",
@@ -43,11 +41,6 @@ export const ResearchPaperRecordComponent = ({
         },
       }}
     >
-      <KeyValueTypography keyName={"Name"} value={name}></KeyValueTypography>
-      <KeyValueTypography
-        keyName={"Paper ID"}
-        value={paperId}
-      ></KeyValueTypography>
       <Box
         sx={{
           display: "flex",
@@ -59,26 +52,43 @@ export const ResearchPaperRecordComponent = ({
       >
         <Image src={image} height={200} width={200} alt={"image"}></Image>
       </Box>
-      <KeyValueTypography
-        keyName={"Domain"}
-        value={domain}
-      ></KeyValueTypography>
-      <KeyValueTypography
-        keyName={"Description"}
-        value={description}
-      ></KeyValueTypography>
-      <KeyValueTypography
-        keyName={"Author Name"}
-        value={authorName}
-      ></KeyValueTypography>
-      <KeyValueTypography
-        keyName={"Up Votes"}
-        value={upVotes}
-      ></KeyValueTypography>
-      <KeyValueTypography
-        keyName={"Access Fee"}
-        value={accessFee.toLocaleString()}
-      ></KeyValueTypography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          overflowY: "auto",
+          overflowX: "hidden",
+          width: "100%",
+          gap: "10px",
+        }}
+      >
+        <KeyValueTypography keyName={"Name"} value={name}></KeyValueTypography>
+        <KeyValueTypography
+          keyName={"Paper ID"}
+          value={paperId}
+        ></KeyValueTypography>
+
+        <KeyValueTypography
+          keyName={"Domain"}
+          value={domain}
+        ></KeyValueTypography>
+        <KeyValueTypography
+          keyName={"Description"}
+          value={description}
+        ></KeyValueTypography>
+        <KeyValueTypography
+          keyName={"Author Name"}
+          value={authorName}
+        ></KeyValueTypography>
+        <KeyValueTypography
+          keyName={"Up Votes"}
+          value={upVotes}
+        ></KeyValueTypography>
+        <KeyValueTypography
+          keyName={"Access Fee"}
+          value={accessFee.toLocaleString()}
+        ></KeyValueTypography>
+      </Box>
     </Box>
   );
 };
