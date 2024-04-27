@@ -25,8 +25,8 @@ export const ResearchPaperRecordComponent = ({
         gap: "10px",
         alignItems: "flex-start",
         justifyContent: "flex-start",
-        height: "40vh",
-        width: "40vw",
+        height: "60vh",
+        width: "25vw",
         borderRadius: "10px",
         backgroundColor: "transparent",
         boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
@@ -34,8 +34,8 @@ export const ResearchPaperRecordComponent = ({
         overflowY: "auto",
         overflowX: "hidden",
         "@media (max-width: 1500px)": {
-          width: "80vw",
-          height: "38vh",
+          width: "40vw",
+          height: "60vh",
         },
         "@media (max-width: 800px)": {
           width: "80vw",
@@ -57,12 +57,7 @@ export const ResearchPaperRecordComponent = ({
           mb: "20px",
         }}
       >
-        <Image
-          src="/svg/incognito.svg"
-          height={200}
-          width={200}
-          alt={"image"}
-        ></Image>
+        <Image src={image} height={200} width={200} alt={"image"}></Image>
       </Box>
       <KeyValueTypography
         keyName={"Domain"}

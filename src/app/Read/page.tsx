@@ -59,14 +59,18 @@ const Read = () => {
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: mediumScreen
-            ? "repeat(1,1fr)"
-            : "repeat(2, 1fr)",
+          gridTemplateColumns: "repeat(3, 1fr)",
           coloumnGap: "40px",
           rowGap: "40px",
           justifyContent: "center",
           alignItems: "center",
           padding: "20px",
+          "@media (max-width: 1500px)": {
+            gridTemplateColumns: "repeat(2,1fr)",
+          },
+          "@media (max-width: 800px)": {
+            gridTemplateColumns: "repeat(1,1fr)",
+          },
         }}
       >
         {memoizedData.length > 0 ? (

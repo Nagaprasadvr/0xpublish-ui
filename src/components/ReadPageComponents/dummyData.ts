@@ -10,7 +10,7 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "John Doe",
     upVotes: "100",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/machine-learning.jpg",
+    image: "/svg/coding.svg",
   },
   {
     paperId: "a7b2dcf837fc42199bb9bfa1f1e78f1c",
@@ -20,7 +20,7 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "Jane Smith",
     upVotes: "75",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/blockchain.jpg",
+    image: "/svg/blockchain.svg",
   },
   {
     paperId: "fb0c5aa905314947b372f66127bb42d5",
@@ -31,7 +31,7 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "Alice Johnson",
     upVotes: "120",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/quantum-computing.jpg",
+    image: "/svg/quantum.svg",
   },
   {
     paperId: "f142506d36e74ac6ae19b489f6d1b70d",
@@ -42,7 +42,7 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "Bob Anderson",
     upVotes: "90",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/data-privacy.jpg",
+    image: "/svg/incognito.svg",
   },
   {
     paperId: "6f54d48fe06547b3a3b4b9a21408ab1e",
@@ -53,7 +53,7 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "Eva Martinez",
     upVotes: "85",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/deep-learning.jpg",
+    image: "/svg/coding.svg",
   },
   {
     paperId: "ac79cf9b3e7342a2928a3fa1f0a5bc9e",
@@ -64,7 +64,7 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "David Wilson",
     upVotes: "110",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/ethereum-contracts.jpg",
+    image: "/svg/blockchain.svg",
   },
   {
     paperId: "d8d99f5b6f8b4c2eac1cfdd8f7c128d1",
@@ -75,7 +75,7 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "Sophia Garcia",
     upVotes: "95",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/cybersecurity.jpg",
+    image: "/svg/incognito.svg",
   },
   {
     paperId: "edfa6dc4187f46d695b801d60a6aa65c",
@@ -86,7 +86,7 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "Michael Brown",
     upVotes: "130",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/agintelligence.jpg",
+    image: "/svg/coding.svg",
   },
   {
     paperId: "30d29d89a9c24e9580c67d856d317ab9",
@@ -97,7 +97,7 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "Sophie Clark",
     upVotes: "80",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/quantum-cryptography.jpg",
+    image: "/svg/quantum.svg",
   },
   {
     paperId: "c28e1fc3bcfc4c4a91bc3b72fa07b80e",
@@ -108,6 +108,6 @@ export const dummyData: ResearchPaperRecord[] = [
     authorName: "Daniel White",
     upVotes: "105",
     accessFee: Math.floor(Math.random() * 100),
-    image: "https://example.com/web-development-trends.jpg",
+    image: "/svg/coding.svg",
   },
 ];

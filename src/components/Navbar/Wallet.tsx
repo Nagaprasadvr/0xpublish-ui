@@ -22,7 +22,6 @@ export const Wallet = ({
   const { setVisible } = useWalletModal();
   const handleConnect = () => {
     if (setOpen) {
-      console.log("setOpen");
       setOpen(false);
     }
     setVisible(true);
@@ -38,12 +37,6 @@ export const Wallet = ({
     setAnchorEl(null);
   };
   const { connected, publicKey, disconnect, wallet } = useWallet();
-
-  useEffect(() => {
-    if (connected) {
-      toast.success("Connected to wallet !");
-    }
-  }, [connected]);
 
   const handleDisconnect = () => {
     disconnect().then(() => {
