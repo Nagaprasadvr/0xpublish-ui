@@ -1,6 +1,7 @@
 import { Search } from "@mui/icons-material";
-import { Box, Input, useTheme } from "@mui/material";
+import { Box, Button, IconButton, Input, useTheme } from "@mui/material";
 import { Dispatch, SetStateAction } from "react";
+import CloseIcon from "@mui/icons-material/Close";
 
 type SearchBarProps = {
   searchString: string;
@@ -37,6 +38,9 @@ export const SearchBar = ({
         placeholder="Search"
         size="small"
       />
+      <IconButton onClick={() => setSearchString("")}>
+        <CloseIcon color="primary" />
+      </IconButton>
     </Box>
   );
 };

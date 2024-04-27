@@ -1,6 +1,6 @@
 import { KeyValueTypography } from "@/utils/helpers";
 import { ResearchPaperRecord } from "@/utils/types";
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, Button, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
 export const ResearchPaperRecordComponent = ({
@@ -22,10 +22,10 @@ export const ResearchPaperRecordComponent = ({
         display: "flex",
         flexDirection: "column",
         p: "20px",
-        gap: "10px",
+        gap: "20px",
         alignItems: "flex-start",
         justifyContent: "flex-start",
-        height: "60vh",
+        height: "65vh",
         width: "25vw",
         borderRadius: "10px",
         backgroundColor: "transparent",
@@ -33,11 +33,11 @@ export const ResearchPaperRecordComponent = ({
         border: "2px solid #87cefa",
         "@media (max-width: 1500px)": {
           width: "40vw",
-          height: "60vh",
+          height: "65vh",
         },
         "@media (max-width: 800px)": {
           width: "80vw",
-          height: "80vh",
+          height: "85vh",
         },
       }}
     >
@@ -86,9 +86,16 @@ export const ResearchPaperRecordComponent = ({
         ></KeyValueTypography>
         <KeyValueTypography
           keyName={"Access Fee"}
-          value={accessFee.toLocaleString()}
+          value={accessFee.toLocaleString() + " SOL"}
         ></KeyValueTypography>
       </Box>
+      <Button
+        sx={{
+          width: "100%",
+        }}
+      >
+        Get Access
+      </Button>
     </Box>
   );
 };

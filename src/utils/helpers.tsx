@@ -1,10 +1,19 @@
-import { Box, Skeleton, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  IconButton,
+  Skeleton,
+  Tooltip,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import {
   GridRenderCellParams,
   GridTreeNodeWithRender,
   GridApi,
   GridKeyValue,
 } from "@mui/x-data-grid";
+import toast from "react-hot-toast";
 
 export const minimizePubkey = (pubkey: string) => {
   return pubkey.slice(0, 5) + "..." + pubkey.slice(-5);
@@ -143,8 +152,34 @@ export const KeyValueTypography = ({
           display: "flex",
           width: "100%",
           overflowX: "auto",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          gap: "5px",
         }}
       >
+        {keyName === "Paper ID" && (
+          <Tooltip title="Copy Paper Id">
+            <IconButton
+              onClick={() => {
+                navigator.clipboard.writeText(value);
+                toast.success(
+                  `Copied Paper Id ${minimizePubkey(
+                    value.toString()
+                  )} to clipboard`
+                );
+              }}
+            >
+              <ContentCopyIcon
+                sx={{
+                  cursor: "pointer",
+                  color: "white",
+                  fontSize: "18px",
+                }}
+              />
+            </IconButton>
+          </Tooltip>
+        )}
         <Typography fontSize={"20px"}>{value}</Typography>
       </Box>
     </Box>

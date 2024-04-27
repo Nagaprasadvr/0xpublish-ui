@@ -8,8 +8,8 @@ export const dummyData: ResearchPaperRecord[] = [
     description:
       "A beginner's guide to machine learning concepts and algorithms.",
     authorName: "John Doe",
-    upVotes: "100",
-    accessFee: Math.floor(Math.random() * 100),
+    upVotes: "10",
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/coding.svg",
   },
   {
@@ -19,7 +19,7 @@ export const dummyData: ResearchPaperRecord[] = [
     description: "An overview of blockchain technology and its applications.",
     authorName: "Jane Smith",
     upVotes: "75",
-    accessFee: Math.floor(Math.random() * 100),
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/blockchain.svg",
   },
   {
@@ -30,7 +30,7 @@ export const dummyData: ResearchPaperRecord[] = [
       "Exploring the potential of quantum computing in solving complex problems.",
     authorName: "Alice Johnson",
     upVotes: "120",
-    accessFee: Math.floor(Math.random() * 100),
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/quantum.svg",
   },
   {
@@ -41,7 +41,7 @@ export const dummyData: ResearchPaperRecord[] = [
       "Analyzing data privacy regulations and their impact on businesses.",
     authorName: "Bob Anderson",
     upVotes: "90",
-    accessFee: Math.floor(Math.random() * 100),
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/incognito.svg",
   },
   {
@@ -52,7 +52,7 @@ export const dummyData: ResearchPaperRecord[] = [
       "Exploring real-world applications of deep learning in various industries.",
     authorName: "Eva Martinez",
     upVotes: "85",
-    accessFee: Math.floor(Math.random() * 100),
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/coding.svg",
   },
   {
@@ -63,7 +63,7 @@ export const dummyData: ResearchPaperRecord[] = [
       "A comprehensive guide to Ethereum smart contracts development.",
     authorName: "David Wilson",
     upVotes: "110",
-    accessFee: Math.floor(Math.random() * 100),
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/blockchain.svg",
   },
   {
@@ -74,7 +74,7 @@ export const dummyData: ResearchPaperRecord[] = [
       "Essential cybersecurity practices for protecting your digital assets.",
     authorName: "Sophia Garcia",
     upVotes: "95",
-    accessFee: Math.floor(Math.random() * 100),
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/incognito.svg",
   },
   {
@@ -85,7 +85,7 @@ export const dummyData: ResearchPaperRecord[] = [
       "The quest for creating artificial general intelligence and its challenges.",
     authorName: "Michael Brown",
     upVotes: "130",
-    accessFee: Math.floor(Math.random() * 100),
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/coding.svg",
   },
   {
@@ -96,7 +96,7 @@ export const dummyData: ResearchPaperRecord[] = [
       "Fundamental concepts and principles of quantum cryptography for secure communication.",
     authorName: "Sophie Clark",
     upVotes: "80",
-    accessFee: Math.floor(Math.random() * 100),
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/quantum.svg",
   },
   {
@@ -107,7 +107,7 @@ export const dummyData: ResearchPaperRecord[] = [
       "Latest trends and technologies shaping the field of web development.",
     authorName: "Daniel White",
     upVotes: "105",
-    accessFee: Math.floor(Math.random() * 100),
+    accessFee: Math.floor(Math.random() * 10),
     image: "/svg/coding.svg",
   },
 ];
