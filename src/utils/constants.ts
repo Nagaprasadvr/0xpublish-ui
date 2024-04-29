@@ -3,3 +3,10 @@ export const HELIUS_RPC_ENDPOINT =
 
 export const PROD_NAME = "Øxpublish";
 export const CHARCOAL = "#36454F";
+
+export const MAX_ACCESS_FEE = 100;
+export const MAX_NAME_LENGTH = 100;
+export const MAX_DESCRIPTION_LENGTH = 500;
+
+export const MAX_RESEARCH_PAPER_SIZE_IN_BYTES = 100 * 1024 * 1024;
+export const MAX_IMAGE_SIZE_IN_BYTES = 10 * 1024 * 1024;

@@ -27,15 +27,7 @@ const darkTheme = createTheme({
         },
       },
     },
-    // MuiInput: {
-    //   styleOverrides: {
-    //     root: {
-    //       backgroundColor: "white",
-    //       borderRadius: "5px",
 
-    //     },
-    //   },
-    // },
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
