@@ -191,6 +191,7 @@ export const PublishPageInput = () => {
           sx={{
             display: "flex",
             overflowX: "auto",
+            width: "inherit",
           }}
         >
           {paperId !== "" ? (
