@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-import { sha256 } from "crypto-hash";
+import { sha256 } from "js-sha256";
 import {
   MAX_ACCESS_FEE,
   MAX_DESCRIPTION_LENGTH,
@@ -65,7 +65,7 @@ export const PublishPageInput = () => {
   useEffect(() => {
     const generatePaperId = async () => {
       if (inputState.Author !== "" && inputState.Name !== "") {
-        const hash = await sha256(inputState.Author + inputState.Name);
+        const hash = sha256(inputState.Author + inputState.Name);
         setPaperId(hash);
       } else {
         setPaperId("");
